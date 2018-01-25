@@ -45,6 +45,7 @@ public:
 
         vector<int>::iterator finded_a = find(numbers.begin(), numbers.end(), num2[a]);
         vector<int>::iterator finded_b = find(numbers.begin(), numbers.end(), num2[b]);  
+//在出现[3,3] 6这样的数据时会有问题, 因为find函数找的只是第一个出现的位置
         result.push_back(numbers.end() - finded_b);
         result.push_back(numbers.end() - finded_a);
         
